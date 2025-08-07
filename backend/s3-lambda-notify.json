@@ -1,0 +1,9 @@
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "Id": "TriggerOnImageUpload",
+      "LambdaFunctionArn": "arn:aws:lambda:ap-south-1:925352741061:function:AttendanceProcessor-prod",
+      "Events": ["s3:ObjectCreated:*"]
+    }
+  ]
+}

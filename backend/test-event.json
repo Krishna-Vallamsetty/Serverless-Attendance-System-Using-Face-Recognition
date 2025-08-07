@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "face-attendance-prod"
+        },
+        "object": {
+          "key": "employee1.jpg"
+        }
+      }
+    }
+  ]
+}
