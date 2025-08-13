@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:PutObject"],
+      "Resource": "arn:aws:s3:::my-attendance-bucket-admin925/uploads/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["lambda:InvokeFunction"],
+      "Resource": "arn:aws:lambda:ap-south-1:925352741061:function:AttendanceProcessor"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["dynamodb:PutItem", "dynamodb:Query", "dynamodb:Scan"],
+      "Resource": "arn:aws:dynamodb:ap-south-1:925352741061:table/AttendanceLogs-prod"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["rekognition:SearchFacesByImage"],
+      "Resource": "*"
+    }
+  ]
+}

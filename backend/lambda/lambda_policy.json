@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "rekognition:*",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:GetItem",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:rekognition:ap-south-1:925352741061:collection/attendance-collection",
+        "arn:aws:dynamodb:ap-south-1:925352741061:table/AttendanceLogs-prod",
+        "arn:aws:s3:::my-attendance-bucket-admin925/*"
+      ]
+    }
+  ]
+}

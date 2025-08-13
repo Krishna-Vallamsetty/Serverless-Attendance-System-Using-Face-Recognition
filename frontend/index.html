@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Attendance System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Attendance System</h1>
+    <p>Capture your image using your webcam or device camera to mark attendance securely.</p>
+  </header>
+  <main>
+    <section
+      class="camera-container"
+      aria-live="polite"
+      aria-label="Webcam capture and upload area"
+      role="region"
+    >
+      <video id="video" autoplay playsinline aria-label="Live webcam feed"></video>
+      <canvas id="canvas" hidden></canvas>
+      <img id="photo" alt="Captured photo preview" hidden />
+      <div class="btn-group" role="group" aria-label="Camera control buttons">
+        <button id="capture" aria-label="Capture photo from webcam" title="Capture photo">Capture</button>
+        <button id="retake" aria-label="Retake photo" hidden>Retake</button>
+        <button id="upload" aria-label="Upload captured photo" hidden>Upload</button>
+      </div>
+      <div id="status" role="status" aria-live="polite" aria-atomic="true"></div>
+      <div id="spinner" class="spinner" aria-hidden="true" hidden></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@5.2.7/dist/amazon-cognito-identity.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
